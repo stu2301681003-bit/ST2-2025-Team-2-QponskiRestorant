@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QponskiRestorant")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce3f06ee7af98bddeac01cdd1fab99cf6bd63fcc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6dbdb856a3517240f5c39ec9a338d54deaf125bb")]
 [assembly: System.Reflection.AssemblyProductAttribute("QponskiRestorant")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QponskiRestorant")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
