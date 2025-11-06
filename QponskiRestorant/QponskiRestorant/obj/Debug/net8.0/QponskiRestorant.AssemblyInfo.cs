@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QponskiRestorant")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd608219501033d5770c50e4854930cc2d612c78")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a8c08667859eb2ea7c9a3f9085b04ee66cdf485")]
 [assembly: System.Reflection.AssemblyProductAttribute("QponskiRestorant")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QponskiRestorant")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
