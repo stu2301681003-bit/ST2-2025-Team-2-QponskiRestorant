@@ -1,6 +1,7 @@
-using System.Diagnostics;
+using JapaneseRestaurant.Services;
 using JapaneseRestaurantMVC.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace JapaneseRestaurantMVC.Controllers
 {
@@ -15,6 +16,11 @@ namespace JapaneseRestaurantMVC.Controllers
 
         public IActionResult Index()
         {
+            var aiService = LocalAIModelService.Instance;
+            var recommendation = aiService.GenerateRecommendation("Sushi");
+
+            ViewBag.Recommendation = recommendation;
+
             return View();
         }
 
