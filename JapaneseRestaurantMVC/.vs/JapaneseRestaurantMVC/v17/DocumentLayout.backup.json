@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|c:\\users\\dananino\\documents\\github\\st2-2025-team-2-qponskirestorant\\japaneserestaurantmvc\\japaneserestaurantmvc\\observer\\reservationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|solutionrelative:japaneserestaurantmvc\\observer\\reservationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|c:\\users\\dananino\\documents\\github\\st2-2025-team-2-qponskirestorant\\japaneserestaurantmvc\\japaneserestaurantmvc\\observer\\emailnotifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|solutionrelative:japaneserestaurantmvc\\observer\\emailnotifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|c:\\users\\dananino\\documents\\github\\st2-2025-team-2-qponskirestorant\\japaneserestaurantmvc\\japaneserestaurantmvc\\observer\\ireservationobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|solutionrelative:japaneserestaurantmvc\\observer\\ireservationobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|c:\\users\\dananino\\documents\\github\\st2-2025-team-2-qponskirestorant\\japaneserestaurantmvc\\japaneserestaurantmvc\\services\\localaimodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|solutionrelative:japaneserestaurantmvc\\services\\localaimodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|c:\\users\\dananino\\documents\\github\\st2-2025-team-2-qponskirestorant\\japaneserestaurantmvc\\japaneserestaurantmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|solutionrelative:japaneserestaurantmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|c:\\users\\dananino\\documents\\github\\st2-2025-team-2-qponskirestorant\\japaneserestaurantmvc\\japaneserestaurantmvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -25,6 +13,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|c:\\users\\dananino\\documents\\github\\st2-2025-team-2-qponskirestorant\\japaneserestaurantmvc\\japaneserestaurantmvc\\migrations\\20251109095252_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|solutionrelative:japaneserestaurantmvc\\migrations\\20251109095252_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|c:\\users\\dananino\\documents\\github\\st2-2025-team-2-qponskirestorant\\japaneserestaurantmvc\\japaneserestaurantmvc\\observer\\emailnotifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|solutionrelative:japaneserestaurantmvc\\observer\\emailnotifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|c:\\users\\dananino\\documents\\github\\st2-2025-team-2-qponskirestorant\\japaneserestaurantmvc\\japaneserestaurantmvc\\services\\localaimodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|solutionrelative:japaneserestaurantmvc\\services\\localaimodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,58 +35,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ReservationManager.cs",
-              "DocumentMoniker": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Observer\\ReservationManager.cs",
-              "RelativeDocumentMoniker": "JapaneseRestaurantMVC\\Observer\\ReservationManager.cs",
-              "ToolTip": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Observer\\ReservationManager.cs",
-              "RelativeToolTip": "JapaneseRestaurantMVC\\Observer\\ReservationManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T17:40:35.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmailNotifier.cs",
-              "DocumentMoniker": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Observer\\EmailNotifier.cs",
-              "RelativeDocumentMoniker": "JapaneseRestaurantMVC\\Observer\\EmailNotifier.cs",
-              "ToolTip": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Observer\\EmailNotifier.cs",
-              "RelativeToolTip": "JapaneseRestaurantMVC\\Observer\\EmailNotifier.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T17:39:57.155Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IReservationObserver.cs",
-              "DocumentMoniker": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Observer\\IReservationObserver.cs",
-              "RelativeDocumentMoniker": "JapaneseRestaurantMVC\\Observer\\IReservationObserver.cs",
-              "ToolTip": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Observer\\IReservationObserver.cs",
-              "RelativeToolTip": "JapaneseRestaurantMVC\\Observer\\IReservationObserver.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T11:54:08.394Z",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "JapaneseRestaurantMVC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "JapaneseRestaurantMVC\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-09T18:25:37.427Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "EmailNotifier.cs",
+              "DocumentMoniker": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Observer\\EmailNotifier.cs",
+              "RelativeDocumentMoniker": "JapaneseRestaurantMVC\\Observer\\EmailNotifier.cs",
+              "ToolTip": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Observer\\EmailNotifier.cs",
+              "RelativeToolTip": "JapaneseRestaurantMVC\\Observer\\EmailNotifier.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T17:52:17.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "LocalAIModelService.cs",
               "DocumentMoniker": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Services\\LocalAIModelService.cs",
               "RelativeDocumentMoniker": "JapaneseRestaurantMVC\\Services\\LocalAIModelService.cs",
               "ToolTip": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Services\\LocalAIModelService.cs",
               "RelativeToolTip": "JapaneseRestaurantMVC\\Services\\LocalAIModelService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-09T11:46:43.067Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "20251109095252_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Migrations\\20251109095252_InitialCreate.cs",
               "RelativeDocumentMoniker": "JapaneseRestaurantMVC\\Migrations\\20251109095252_InitialCreate.cs",
@@ -98,17 +81,18 @@
               "RelativeToolTip": "JapaneseRestaurantMVC\\Migrations\\20251109095252_InitialCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T09:52:52.373Z"
+              "WhenOpened": "2025-11-09T09:52:52.373Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\appsettings.json",
               "RelativeDocumentMoniker": "JapaneseRestaurantMVC\\appsettings.json",
               "ToolTip": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\appsettings.json",
               "RelativeToolTip": "JapaneseRestaurantMVC\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-11-09T09:43:09.893Z",
               "EditorCaption": ""

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JapaneseRestaurantMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10ee53e75cf8d5d3c87096c7e54374e87f35d048")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+595c4cca0e6e26471c45b078851045b9fb715ef6")]
 [assembly: System.Reflection.AssemblyProductAttribute("JapaneseRestaurantMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JapaneseRestaurantMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

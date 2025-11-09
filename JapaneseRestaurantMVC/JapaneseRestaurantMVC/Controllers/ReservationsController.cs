@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using JapaneseRestaurant.Data;
+using JapaneseRestaurant.Models;
+using JapaneseRestaurant.Observer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using JapaneseRestaurant.Data;
-using JapaneseRestaurant.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
 
 namespace JapaneseRestaurantMVC.Controllers
 {
@@ -58,12 +60,22 @@ namespace JapaneseRestaurantMVC.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Save reservation in database
                 _context.Add(reservation);
                 await _context.SaveChangesAsync();
+
+                // Use Observer pattern
+                var manager = new ReservationManager();
+                var emailNotifier = new EmailNotifier();
+
+                manager.Subscribe(emailNotifier);
+                manager.AddReservation(reservation);
+
                 return RedirectToAction(nameof(Index));
             }
             return View(reservation);
         }
+
 
         // GET: Reservations/Edit/5
         public async Task<IActionResult> Edit(int? id)
