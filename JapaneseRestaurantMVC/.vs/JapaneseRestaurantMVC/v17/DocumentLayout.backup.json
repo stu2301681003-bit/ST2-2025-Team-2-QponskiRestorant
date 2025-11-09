@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|c:\\users\\dananino\\documents\\github\\st2-2025-team-2-qponskirestorant\\japaneserestaurantmvc\\japaneserestaurantmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|solutionrelative:japaneserestaurantmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "JapaneseRestaurantMVC\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "JapaneseRestaurantMVC\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T09:02:59.598Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
