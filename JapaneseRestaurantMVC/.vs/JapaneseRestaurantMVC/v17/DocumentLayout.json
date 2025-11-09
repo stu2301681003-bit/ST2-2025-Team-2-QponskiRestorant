@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Migrations\\20251109095252_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:JapaneseRestaurantMVC\\Migrations\\20251109095252_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|c:\\users\\dananino\\documents\\github\\st2-2025-team-2-qponskirestorant\\japaneserestaurantmvc\\japaneserestaurantmvc\\migrations\\20251109095252_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|solutionrelative:japaneserestaurantmvc\\migrations\\20251109095252_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|c:\\users\\dananino\\documents\\github\\st2-2025-team-2-qponskirestorant\\japaneserestaurantmvc\\japaneserestaurantmvc\\data\\designtimedbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,8 +59,7 @@
               "RelativeToolTip": "JapaneseRestaurantMVC\\Data\\DesignTimeDbContextFactory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T09:52:20.519Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-09T09:52:20.519Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "JapaneseRestaurantMVC\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T09:43:46.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-09T09:43:46.895Z"
             },
             {
               "$type": "Document",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "JapaneseRestaurantMVC\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-09T09:43:09.893Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-09T09:43:09.893Z"
             },
             {
               "$type": "Document",
@@ -98,8 +95,7 @@
               "RelativeToolTip": "JapaneseRestaurantMVC\\Data\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T09:40:27.029Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-09T09:40:27.029Z"
             },
             {
               "$type": "Document",
