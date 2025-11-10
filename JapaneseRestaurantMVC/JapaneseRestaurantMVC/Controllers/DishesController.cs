@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using JapaneseRestaurant.Data;
+using JapaneseRestaurant.Models;
+using JapaneseRestaurant.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using JapaneseRestaurant.Data;
-using JapaneseRestaurant.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace JapaneseRestaurantMVC.Controllers
 {
@@ -22,7 +23,15 @@ namespace JapaneseRestaurantMVC.Controllers
         // GET: Dishes
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Dishes.ToListAsync());
+            var dishes = await _context.Dishes.ToListAsync();
+
+            // Generate AI recommendations
+            foreach (var dish in dishes)
+            {
+                dish.Recommendation = LocalAIModelService.Instance.GenerateRecommendation(dish.Name);
+            }
+
+            return View(dishes);
         }
 
         // GET: Dishes/Details/5
@@ -153,5 +162,15 @@ namespace JapaneseRestaurantMVC.Controllers
         {
             return _context.Dishes.Any(e => e.Id == id);
         }
+        [HttpPost]
+        public async Task<IActionResult> GetRecommendation(int id)
+        {
+            var dish = await _context.Dishes.FindAsync(id);
+            if (dish == null) return NotFound();
+
+            dish.Recommendation = LocalAIModelService.Instance.GenerateRecommendation(dish.Name);
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }

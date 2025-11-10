@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace JapaneseRestaurant.Models
 {
@@ -16,5 +17,9 @@ namespace JapaneseRestaurant.Models
         public decimal Price { get; set; }
 
         public string? ImageUrl { get; set; }
+
+        [NotMapped]
+        public string Recommendation { get; set; }
+
     }
 }

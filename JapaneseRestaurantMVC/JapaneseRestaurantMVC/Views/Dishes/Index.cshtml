@@ -1,4 +1,6 @@
-﻿@model IEnumerable<JapaneseRestaurant.Models.Dish>
+﻿@using JapaneseRestaurant.Models
+@model IEnumerable<JapaneseRestaurant.Models.Dish>
+
 
 @{
     ViewData["Title"] = "Index";
@@ -24,6 +26,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.ImageUrl)
             </th>
+            <th>Recommendation</th>
             <th></th>
         </tr>
     </thead>
@@ -42,12 +45,18 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ImageUrl)
             </td>
+                <td>@item.Recommendation</td>
+                <td>
+                    <form asp-action="GetRecommendation" asp-route-id="@item.Id" method="post">
+                        <button type="submit" class="btn btn-info">Get Recommendation</button>
+                    </form>
+                </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
-}
+        }
     </tbody>
 </table>

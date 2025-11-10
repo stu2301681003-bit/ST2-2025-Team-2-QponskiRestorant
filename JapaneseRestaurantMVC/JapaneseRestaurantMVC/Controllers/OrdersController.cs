@@ -50,6 +50,7 @@ namespace JapaneseRestaurantMVC.Controllers
         {
             ViewData["CustomerId"] = new SelectList(_context.Customers, "Id", "Name");
             return View();
+
         }
 
         // POST: Orders/Create
@@ -59,6 +60,14 @@ namespace JapaneseRestaurantMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,CustomerId,Date,TotalPrice")] Order order)
         {
+            if (!ModelState.IsValid)
+            {
+                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    Console.WriteLine(error.ErrorMessage);
+                }
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Add(order);
@@ -67,6 +76,7 @@ namespace JapaneseRestaurantMVC.Controllers
             }
             ViewData["CustomerId"] = new SelectList(_context.Customers, "Id", "Name", order.CustomerId);
             return View(order);
+
         }
 
         // GET: Orders/Edit/5

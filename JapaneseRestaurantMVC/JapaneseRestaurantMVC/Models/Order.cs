@@ -11,12 +11,13 @@ namespace JapaneseRestaurant.Models
         public int CustomerId { get; set; }
 
         [ForeignKey("CustomerId")]
-        public Customer Customer { get; set; }
+        public Customer? Customer { get; set; }
 
         public DateTime Date { get; set; } = DateTime.Now;
 
         public decimal TotalPrice { get; set; }
 
-        public ICollection<OrderItem> OrderItems { get; set; }
+        public ICollection<OrderItem>? OrderItems { get; set; } = new List<OrderItem>();
+
     }
 }
