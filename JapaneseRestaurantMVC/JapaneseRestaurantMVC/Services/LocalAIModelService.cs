@@ -1,14 +1,18 @@
-﻿namespace JapaneseRestaurant.Services
+﻿using System;
+
+namespace JapaneseRestaurant.Services
 {
     public class LocalAIModelService
     {
         private static LocalAIModelService? _instance;
         private static readonly object _lock = new object();
 
-        // Private constructor
+        private string _modelPath;
+
         private LocalAIModelService()
         {
-            // Инициализация на локалния ИИ модел
+            _modelPath = "Models/my_local_model.bin";
+
         }
 
         public static LocalAIModelService Instance
@@ -31,7 +35,13 @@
 
         public string GenerateRecommendation(string input)
         {
-            return $"AI suggests: {input}";
+            if (input.Contains("sushi", StringComparison.OrdinalIgnoreCase))
+                return "Try the salmon roll!";
+            else if (input.Contains("ramen", StringComparison.OrdinalIgnoreCase))
+                return "Our chef recommends trying today's special!";
+            else
+                return "Add extra noodles for better taste!";
         }
+
     }
 }

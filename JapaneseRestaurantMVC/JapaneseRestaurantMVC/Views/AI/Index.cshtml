@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "AI Recommendations";
+}
+
+<h2>AI Recommendations</h2>
+
+<form method="post" asp-controller="AI" asp-action="GetRecommendation">
+    <input type="text" name="input" placeholder="Write here..." />
+    <button type="submit">Get recomendation</button>
+</form>
+
+@if (ViewBag.Result != null)
+{
+    <p><strong>Results from AI:</strong> @ViewBag.Result</p>
+}
