@@ -47,22 +47,47 @@ namespace JapaneseRestaurantMVC.Controllers
         public IActionResult Create()
         {
             ViewData["CustomerId"] = new SelectList(_context.Customers, "Id", "Name");
+            ViewData["Dishes"] = _context.Dishes.ToList(); 
             return View();
         }
 
         // POST: Orders/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,CustomerId,Date,TotalPrice")] Order order)
+        public async Task<IActionResult> Create(Order order, int[] dishIds, int[] quantities)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(order);
                 await _context.SaveChangesAsync();
+
+                for (int i = 0; i < dishIds.Length; i++)
+                {
+                    if (quantities[i] > 0)
+                    {
+                        var dish = await _context.Dishes.FindAsync(dishIds[i]);
+                        var orderItem = new OrderItem
+                        {
+                            OrderId = order.Id,
+                            DishId = dish.Id,
+                            Quantity = quantities[i]
+                        };
+
+                        _context.OrderItems.Add(orderItem);
+                        order.TotalPrice += dish.Price * quantities[i];
+                    }
+                }
+
+                await _context.SaveChangesAsync();
+
+                _context.Update(order);
+                await _context.SaveChangesAsync();
+
                 return RedirectToAction(nameof(Index));
             }
 
             ViewData["CustomerId"] = new SelectList(_context.Customers, "Id", "Name", order.CustomerId);
+            ViewData["Dishes"] = _context.Dishes.ToList();
             return View(order);
         }
 

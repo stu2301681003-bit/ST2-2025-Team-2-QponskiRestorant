@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|c:\\users\\dananino\\documents\\github\\st2-2025-team-2-qponskirestorant\\japaneserestaurantmvc\\japaneserestaurantmvc\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|solutionrelative:japaneserestaurantmvc\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|c:\\users\\dananino\\documents\\github\\st2-2025-team-2-qponskirestorant\\japaneserestaurantmvc\\japaneserestaurantmvc\\controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|solutionrelative:japaneserestaurantmvc\\controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|c:\\users\\dananino\\documents\\github\\st2-2025-team-2-qponskirestorant\\japaneserestaurantmvc\\japaneserestaurantmvc\\views\\orders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|solutionrelative:japaneserestaurantmvc\\views\\orders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|c:\\users\\dananino\\documents\\github\\st2-2025-team-2-qponskirestorant\\japaneserestaurantmvc\\japaneserestaurantmvc\\views\\orders\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|solutionrelative:japaneserestaurantmvc\\views\\orders\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|c:\\users\\dananino\\documents\\github\\st2-2025-team-2-qponskirestorant\\japaneserestaurantmvc\\japaneserestaurantmvc\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|solutionrelative:japaneserestaurantmvc\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|c:\\users\\dananino\\documents\\github\\st2-2025-team-2-qponskirestorant\\japaneserestaurantmvc\\japaneserestaurantmvc\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0C1443-A705-49D7-B353-5D36370D214D}|JapaneseRestaurantMVC\\JapaneseRestaurantMVC.csproj|solutionrelative:japaneserestaurantmvc\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrderItemsController.cs",
-              "DocumentMoniker": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Controllers\\OrderItemsController.cs",
-              "RelativeDocumentMoniker": "JapaneseRestaurantMVC\\Controllers\\OrderItemsController.cs",
-              "ToolTip": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Controllers\\OrderItemsController.cs",
-              "RelativeToolTip": "JapaneseRestaurantMVC\\Controllers\\OrderItemsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T15:09:34.666Z",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Views\\Orders\\Details.cshtml",
+              "RelativeDocumentMoniker": "JapaneseRestaurantMVC\\Views\\Orders\\Details.cshtml",
+              "ToolTip": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Views\\Orders\\Details.cshtml",
+              "RelativeToolTip": "JapaneseRestaurantMVC\\Views\\Orders\\Details.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-10T15:50:37.895Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Views\\Orders\\Create.cshtml",
               "RelativeDocumentMoniker": "JapaneseRestaurantMVC\\Views\\Orders\\Create.cshtml",
               "ToolTip": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Views\\Orders\\Create.cshtml",
               "RelativeToolTip": "JapaneseRestaurantMVC\\Views\\Orders\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAqwDAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-10T15:08:38.69Z",
+              "WhenOpened": "2025-11-10T15:29:03.698Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "JapaneseRestaurantMVC\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Models\\Order.cs",
+              "RelativeToolTip": "JapaneseRestaurantMVC\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T15:27:19.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "OrdersController.cs",
               "DocumentMoniker": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "JapaneseRestaurantMVC\\Controllers\\OrdersController.cs",
               "ToolTip": "C:\\Users\\dananino\\Documents\\GitHub\\ST2-2025-Team-2-QponskiRestorant\\JapaneseRestaurantMVC\\JapaneseRestaurantMVC\\Controllers\\OrdersController.cs",
               "RelativeToolTip": "JapaneseRestaurantMVC\\Controllers\\OrdersController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwH4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAYwDEAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T15:06:50.716Z",
               "EditorCaption": ""

@@ -1,43 +1,48 @@
 ﻿@model JapaneseRestaurant.Models.Order
-
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Create Order";
+    var dishes = ViewData["Dishes"] as List<JapaneseRestaurant.Models.Dish>;
 }
 
-<h1>Create</h1>
+<h2>Create New Order</h2>
 
-<h4>Order</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="All" class="text-danger"></div>
-
-            <div class="form-group">
-                <label asp-for="CustomerId" class="control-label"></label>
-                <select asp-for="CustomerId" class ="form-control" asp-items="ViewBag.CustomerId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Date" class="control-label"></label>
-                <input asp-for="Date" class="form-control" />
-                <span asp-validation-for="Date" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TotalPrice" class="control-label"></label>
-                <input asp-for="TotalPrice" class="form-control" />
-                <span asp-validation-for="TotalPrice" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="CustomerId">Customer</label>
+        <select asp-for="CustomerId" class="form-control" asp-items="ViewBag.CustomerId"></select>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+    <div class="form-group">
+        <label asp-for="Date">Order Date</label>
+        <input asp-for="Date" type="datetime-local" class="form-control" value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
+    </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    <h4>Dishes</h4>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Dish</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < dishes.Count; i++)
+            {
+                <tr>
+                    <td>
+                        <input type="hidden" name="dishIds[@i]" value="@dishes[i].Id" />
+                        @dishes[i].Name
+                    </td>
+                    <td>@dishes[i].Price.ToString("C")</td>
+                    <td>
+                        <input type="number" name="quantities[@i]" value="0" min="0" class="form-control" />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <button type="submit" class="btn btn-primary">Create Order</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
