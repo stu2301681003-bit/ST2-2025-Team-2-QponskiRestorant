@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using JapaneseRestaurant.Data;
+using JapaneseRestaurant.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using JapaneseRestaurant.Data;
-using JapaneseRestaurant.Models;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace JapaneseRestaurantMVC.Controllers
 {
@@ -19,152 +17,52 @@ namespace JapaneseRestaurantMVC.Controllers
             _context = context;
         }
 
-        // GET: OrderItems
-        public async Task<IActionResult> Index()
-        {
-            var appDbContext = _context.OrderItems.Include(o => o.Dish).Include(o => o.Order);
-            return View(await appDbContext.ToListAsync());
-        }
-
-        // GET: OrderItems/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var orderItem = await _context.OrderItems
-                .Include(o => o.Dish)
-                .Include(o => o.Order)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (orderItem == null)
-            {
-                return NotFound();
-            }
-
-            return View(orderItem);
-        }
-
         // GET: OrderItems/Create
-        public IActionResult Create()
+        public IActionResult Create(int? orderId)
         {
+            if (orderId == null)
+                return BadRequest("OrderId is required");
+
+            ViewData["OrderId"] = new SelectList(_context.Orders.Where(o => o.Id == orderId), "Id", "Id", orderId);
             ViewData["DishId"] = new SelectList(_context.Dishes, "Id", "Name");
-            ViewData["OrderId"] = new SelectList(_context.Orders, "Id", "Id");
-            return View();
+
+            return View(new OrderItem { OrderId = orderId.Value });
         }
 
         // POST: OrderItems/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,OrderId,DishId,Quantity")] OrderItem orderItem)
+        public async Task<IActionResult> Create([Bind("OrderId,DishId,Quantity")] OrderItem orderItem)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(orderItem);
+                // Calculate total price of this item
+                var dish = await _context.Dishes.FindAsync(orderItem.DishId);
+                if (dish == null)
+                {
+                    ModelState.AddModelError("DishId", "Selected dish does not exist");
+                    ViewData["OrderId"] = new SelectList(_context.Orders, "Id", "Id", orderItem.OrderId);
+                    ViewData["DishId"] = new SelectList(_context.Dishes, "Id", "Name", orderItem.DishId);
+                    return View(orderItem);
+                }
+
+                _context.OrderItems.Add(orderItem);
+
+                // Update the order total
+                var order = await _context.Orders.Include(o => o.OrderItems).FirstOrDefaultAsync(o => o.Id == orderItem.OrderId);
+                if (order != null)
+                {
+                    order.TotalPrice = order.OrderItems.Sum(oi => oi.Quantity * oi.Dish.Price) + (orderItem.Quantity * dish.Price);
+                    _context.Update(order);
+                }
+
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Details", "Orders", new { id = orderItem.OrderId });
             }
-            ViewData["DishId"] = new SelectList(_context.Dishes, "Id", "Name", orderItem.DishId);
+
             ViewData["OrderId"] = new SelectList(_context.Orders, "Id", "Id", orderItem.OrderId);
-            return View(orderItem);
-        }
-
-        // GET: OrderItems/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var orderItem = await _context.OrderItems.FindAsync(id);
-            if (orderItem == null)
-            {
-                return NotFound();
-            }
             ViewData["DishId"] = new SelectList(_context.Dishes, "Id", "Name", orderItem.DishId);
-            ViewData["OrderId"] = new SelectList(_context.Orders, "Id", "Id", orderItem.OrderId);
             return View(orderItem);
-        }
-
-        // POST: OrderItems/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,OrderId,DishId,Quantity")] OrderItem orderItem)
-        {
-            if (id != orderItem.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(orderItem);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!OrderItemExists(orderItem.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["DishId"] = new SelectList(_context.Dishes, "Id", "Name", orderItem.DishId);
-            ViewData["OrderId"] = new SelectList(_context.Orders, "Id", "Id", orderItem.OrderId);
-            return View(orderItem);
-        }
-
-        // GET: OrderItems/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var orderItem = await _context.OrderItems
-                .Include(o => o.Dish)
-                .Include(o => o.Order)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (orderItem == null)
-            {
-                return NotFound();
-            }
-
-            return View(orderItem);
-        }
-
-        // POST: OrderItems/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var orderItem = await _context.OrderItems.FindAsync(id);
-            if (orderItem != null)
-            {
-                _context.OrderItems.Remove(orderItem);
-            }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool OrderItemExists(int id)
-        {
-            return _context.OrderItems.Any(e => e.Id == id);
         }
     }
 }

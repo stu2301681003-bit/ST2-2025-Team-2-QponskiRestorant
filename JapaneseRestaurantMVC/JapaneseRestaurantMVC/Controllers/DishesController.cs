@@ -23,15 +23,7 @@ namespace JapaneseRestaurantMVC.Controllers
         // GET: Dishes
         public async Task<IActionResult> Index()
         {
-            var dishes = await _context.Dishes.ToListAsync();
-
-            // Generate AI recommendations
-            foreach (var dish in dishes)
-            {
-                dish.Recommendation = LocalAIModelService.Instance.GenerateRecommendation(dish.Name);
-            }
-
-            return View(dishes);
+            return View(await _context.Dishes.ToListAsync());
         }
 
         // GET: Dishes/Details/5
@@ -59,21 +51,18 @@ namespace JapaneseRestaurantMVC.Controllers
         }
 
         // POST: Dishes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,Price,ImageUrl")] Dish dish)
+        public async Task<IActionResult> Create([Bind("Id,Name,Description,Price")] Dish dish)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(dish);
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(); 
                 return RedirectToAction(nameof(Index));
             }
             return View(dish);
         }
-
         // GET: Dishes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -168,7 +157,6 @@ namespace JapaneseRestaurantMVC.Controllers
             var dish = await _context.Dishes.FindAsync(id);
             if (dish == null) return NotFound();
 
-            dish.Recommendation = LocalAIModelService.Instance.GenerateRecommendation(dish.Name);
             return RedirectToAction(nameof(Index));
         }
 

@@ -9,7 +9,7 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Create New Dish</a>
 </p>
 <table class="table">
     <thead>
@@ -45,11 +45,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ImageUrl)
             </td>
-                <td>@item.Recommendation</td>
                 <td>
-                    <form asp-action="GetRecommendation" asp-route-id="@item.Id" method="post">
-                        <button type="submit" class="btn btn-info">Get Recommendation</button>
-                    </form>
                 </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

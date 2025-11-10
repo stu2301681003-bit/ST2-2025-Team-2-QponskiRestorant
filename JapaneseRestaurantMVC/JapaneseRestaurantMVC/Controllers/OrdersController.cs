@@ -46,38 +46,28 @@ namespace JapaneseRestaurantMVC.Controllers
         }
 
         // GET: Orders/Create
-        public IActionResult Create()
+        public IActionResult Create(int orderId)
         {
-            ViewData["CustomerId"] = new SelectList(_context.Customers, "Id", "Name");
-            return View();
-
+            ViewData["DishId"] = new SelectList(_context.Dishes, "Id", "Name");
+            var orderItem = new OrderItem { OrderId = orderId };
+            return View(orderItem);
         }
 
-        // POST: Orders/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,CustomerId,Date,TotalPrice")] Order order)
+        public async Task<IActionResult> Create([Bind("OrderId,DishId,Quantity")] OrderItem orderItem)
         {
-            if (!ModelState.IsValid)
-            {
-                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
-                {
-                    Console.WriteLine(error.ErrorMessage);
-                }
-            }
-
             if (ModelState.IsValid)
             {
-                _context.Add(order);
+                _context.Add(orderItem);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Details", "Orders", new { id = orderItem.OrderId });
             }
-            ViewData["CustomerId"] = new SelectList(_context.Customers, "Id", "Name", order.CustomerId);
-            return View(order);
 
+            ViewData["DishId"] = new SelectList(_context.Dishes, "Id", "Name", orderItem.DishId);
+            return View(orderItem);
         }
+
 
         // GET: Orders/Edit/5
         public async Task<IActionResult> Edit(int? id)
