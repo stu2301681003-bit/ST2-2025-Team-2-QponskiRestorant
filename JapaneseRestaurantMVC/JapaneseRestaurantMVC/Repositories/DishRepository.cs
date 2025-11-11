@@ -4,6 +4,13 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
+//repository pattern
+
+//IDishRepository.cs дефинира, какви операций мога да извършвам върху Dish
+//но не ги имплементира
+
+//докато DishRepository.cs съдържа кода нужен за комуникация с БД 
+
 namespace JapaneseRestaurant.Repositories
 {
     public class DishRepository : IDishRepository
