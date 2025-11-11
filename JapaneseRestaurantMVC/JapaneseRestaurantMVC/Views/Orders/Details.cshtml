@@ -23,7 +23,7 @@
                 <tr>
                     <td>@item.Dish.Name</td>
                     <td>@item.Quantity</td>
-                    <td>@((item.Dish.Price* item.Quantity).ToString("C"))</td>
+                    <td>@(item.Dish.Price)</td>
                 </tr>
             }
         </tbody>
@@ -33,6 +33,4 @@ else
 {
     <p>No items yet.</p>
 }
-
-<a asp-controller="OrderItems" asp-action="Create" asp-route-orderId="@Model.Id" class="btn btn-success">Add Order Item</a>
 <a asp-controller="Orders" asp-action="Index" class="btn btn-secondary">Back to Orders</a>
