@@ -23,7 +23,7 @@
                 <tr>
                     <td>@item.Dish.Name</td>
                     <td>@item.Quantity</td>
-                    <td>@(item.Dish.Price* item.Quantity).ToString("C")</td>
+                    <td>@((item.Dish.Price* item.Quantity).ToString("C"))</td>
                 </tr>
             }
         </tbody>

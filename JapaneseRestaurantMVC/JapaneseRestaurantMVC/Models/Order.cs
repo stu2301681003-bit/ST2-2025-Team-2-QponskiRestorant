@@ -15,7 +15,8 @@ namespace JapaneseRestaurant.Models
 
         public DateTime Date { get; set; } = DateTime.Now;
 
-        public decimal TotalPrice { get; set; }
+        [DataType(DataType.Currency)]
+        public decimal TotalPrice { get; set; } = 0;
 
         public ICollection<OrderItem>? OrderItems { get; set; } = new List<OrderItem>();
 

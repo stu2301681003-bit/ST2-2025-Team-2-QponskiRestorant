@@ -15,11 +15,17 @@ namespace JapaneseRestaurantMVC.Controllers
     public class ReservationsController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly ReservationManager _manager;
 
         public ReservationsController(AppDbContext context)
         {
             _context = context;
+            _manager = new ReservationManager();
+
+            var emailNotifier = new EmailNotifier();
+            _manager.Subscribe(emailNotifier);
         }
+        
 
         // GET: Reservations
         public async Task<IActionResult> Index()
@@ -56,7 +62,7 @@ namespace JapaneseRestaurantMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Date,PeopleCount")] Reservation reservation)
+        public async Task<IActionResult> Create([Bind("Id,Name,Date,Email,PeopleCount")] Reservation reservation)
         {
             if (ModelState.IsValid)
             {
@@ -64,13 +70,10 @@ namespace JapaneseRestaurantMVC.Controllers
                 _context.Add(reservation);
                 await _context.SaveChangesAsync();
 
-                // Use Observer pattern
-                var manager = new ReservationManager();
-                var emailNotifier = new EmailNotifier();
+                _manager.AddReservation(reservation);
 
-                manager.Subscribe(emailNotifier);
-                manager.AddReservation(reservation);
-
+                ViewBag.Message = "Reservation created successfully!";
+                
                 return RedirectToAction(nameof(Index));
             }
             return View(reservation);

@@ -58,38 +58,41 @@ namespace JapaneseRestaurantMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(order);
-                await _context.SaveChangesAsync();
+                order.TotalPrice = 0;
+
+                var orderItems = new List<OrderItem>();
 
                 for (int i = 0; i < dishIds.Length; i++)
                 {
                     if (quantities[i] > 0)
                     {
                         var dish = await _context.Dishes.FindAsync(dishIds[i]);
-                        var orderItem = new OrderItem
+                        if (dish != null)
                         {
-                            OrderId = order.Id,
-                            DishId = dish.Id,
-                            Quantity = quantities[i]
-                        };
+                            orderItems.Add(new OrderItem
+                            {
+                                DishId = dish.Id,
+                                Quantity = quantities[i],
+                                Order = order
+                            });
 
-                        _context.OrderItems.Add(orderItem);
-                        order.TotalPrice += dish.Price * quantities[i];
+                            order.TotalPrice += dish.Price * quantities[i];
+                        }
                     }
                 }
 
+                order.OrderItems = orderItems;
+                _context.Orders.Add(order);
                 await _context.SaveChangesAsync();
 
-                _context.Update(order);
-                await _context.SaveChangesAsync();
-
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Details), new { id = order.Id });
             }
 
             ViewData["CustomerId"] = new SelectList(_context.Customers, "Id", "Name", order.CustomerId);
             ViewData["Dishes"] = _context.Dishes.ToList();
             return View(order);
         }
+
 
         // GET: Orders/Edit/5
         public async Task<IActionResult> Edit(int? id)
