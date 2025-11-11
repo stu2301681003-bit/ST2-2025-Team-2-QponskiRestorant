@@ -7,3 +7,4 @@ namespace JapaneseRestaurant.Observer
         void Update(Reservation reservation);
     }
 }
+//определя какво могат да правят всички observer-и

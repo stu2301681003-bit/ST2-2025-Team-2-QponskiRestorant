@@ -19,7 +19,7 @@ namespace JapaneseRestaurant.Observer
 
         public void AddReservation(Reservation reservation)
         {
-            // Тук добавяте резервацията в DB (по желание чрез Repository)
+
             Notify(reservation);
         }
 
@@ -32,3 +32,8 @@ namespace JapaneseRestaurant.Observer
         }
     }
 }
+//това е основният клас, който управлява резервациите и уведомява
+//всички наблюдатели, когато бъде добавена нова
+
+//когато се добави нова резервация AddReservation,
+//тя извиква NotifyObservers и изпълнява методът Update на всеки наблюдател

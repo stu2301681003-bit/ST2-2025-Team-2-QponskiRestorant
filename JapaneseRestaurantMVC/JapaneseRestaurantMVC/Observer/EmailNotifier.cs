@@ -1,6 +1,7 @@
 ﻿using JapaneseRestaurant.Models;
 using System;
 
+//observer
 namespace JapaneseRestaurant.Observer
 {
     public class EmailNotifier : IReservationObserver
@@ -11,3 +12,5 @@ namespace JapaneseRestaurant.Observer
         }
     }
 }
+//когато ReservationManager го уведоми за нова резервация,
+//той реагира тук, като симулира изпращане на имейл
